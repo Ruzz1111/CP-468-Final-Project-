@@ -1,7 +1,7 @@
 # src/dataset.py
 import pandas as pd
 import re
-import ast
+import json
 
 class GrammarErrorCorrectionDataset:
     def __init__(self, csv_path):
@@ -31,7 +31,7 @@ class GrammarErrorCorrectionDataset:
             self._add_tokens_to_vocab(input_tokens) 
         
            
-            corrections_list = ast.literal_eval(row['corrections'])
+            corrections_list = json.loads(row['corrections'])
             
             for correction in corrections_list:
                 
