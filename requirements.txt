@@ -10,3 +10,4 @@ pyarrow==11.0.0
 fsspec==2023.9.2
 zstandard==0.25.0
 torch==2.2.2
+nltk==3.10.2
